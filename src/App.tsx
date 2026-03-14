@@ -388,7 +388,7 @@ export default function App() {
             >
               <div className="w-full h-full rounded-full overflow-hidden border-4 border-spiritual-gold/30 shadow-2xl">
                 <img 
-                  src="/Coach.jpg" 
+                  src="/coach.jpg" 
                   alt="Coach Espiritual" 
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
