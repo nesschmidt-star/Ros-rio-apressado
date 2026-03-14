@@ -263,13 +263,13 @@ export default function App() {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="lg:w-1/2 relative"
+              className="lg:w-1/2 relative flex justify-center"
             >
-              <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+              <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white max-w-md lg:max-w-full mx-auto">
                 <img 
                   src="/benzedeira.png" 
                   alt="Benzedeira - Quem sou eu" 
-                  className="w-full h-[600px] object-cover"
+                  className="w-full h-[500px] md:h-[600px] object-cover object-top"
                   referrerPolicy="no-referrer"
                 />
               </div>
@@ -381,16 +381,16 @@ export default function App() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="hidden lg:block w-64 h-64 relative"
+              className="w-48 h-48 md:w-64 md:h-64 relative mx-auto lg:mx-0"
             >
               <div className="w-full h-full rounded-full overflow-hidden border-4 border-spiritual-gold/30 shadow-2xl">
                 <img 
                   src="/coach.png" 
                   alt="Coach Espiritual" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                   referrerPolicy="no-referrer"
                 />
               </div>
