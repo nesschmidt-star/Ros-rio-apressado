@@ -267,7 +267,7 @@ export default function App() {
             >
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
                 <img 
-                  src="/benzedeira.png" 
+                  src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80&w=800" 
                   alt="Benzedeira - Quem sou eu" 
                   className="w-full h-[600px] object-cover"
                   referrerPolicy="no-referrer"
@@ -388,7 +388,7 @@ export default function App() {
             >
               <div className="w-full h-full rounded-full overflow-hidden border-4 border-spiritual-gold/30 shadow-2xl">
                 <img 
-                  src="/coach.png" 
+                  src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=400" 
                   alt="Coach Espiritual" 
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
