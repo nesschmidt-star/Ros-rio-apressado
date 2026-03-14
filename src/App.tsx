@@ -267,7 +267,7 @@ export default function App() {
             >
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
                 <img 
-                  src="/benzedeira.jpg" 
+                  src="/benzedeira.png" 
                   alt="Benzedeira - Quem sou eu" 
                   className="w-full h-[600px] object-cover"
                   referrerPolicy="no-referrer"
@@ -388,7 +388,7 @@ export default function App() {
             >
               <div className="w-full h-full rounded-full overflow-hidden border-4 border-spiritual-gold/30 shadow-2xl">
                 <img 
-                  src="/coach.jpg" 
+                  src="/coach.png" 
                   alt="Coach Espiritual" 
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
