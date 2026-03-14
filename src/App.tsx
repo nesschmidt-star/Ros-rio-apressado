@@ -5,6 +5,8 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
+import benzedeiraImg from './benzedeira.png';
+import coachImg from './coach.png';
 import { 
   MessageCircle, 
   Sparkles, 
@@ -267,10 +269,9 @@ export default function App() {
             >
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white w-full max-w-md bg-gray-200">
                 <img 
-                  src={`${import.meta.env.BASE_URL}benzedeira.png`}
+                  src={benzedeiraImg}
                   alt="Benzedeira - Quem sou eu" 
                   className="w-full h-[500px] md:h-[600px] object-cover object-top block bg-spiritual-purple/10"
-                  referrerPolicy="no-referrer"
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 w-64 h-64 bg-spiritual-gold/20 rounded-full blur-3xl -z-0"></div>
@@ -388,10 +389,9 @@ export default function App() {
             >
               <div className="w-full h-full rounded-full overflow-hidden border-4 border-spiritual-gold/30 shadow-2xl bg-spiritual-purple/20">
                 <img 
-                  src={`${import.meta.env.BASE_URL}coach.png`}
+                  src={coachImg}
                   alt="Coach Espiritual" 
                   className="w-full h-full object-cover object-top block bg-spiritual-purple/10"
-                  referrerPolicy="no-referrer"
                 />
               </div>
               <div className="absolute -inset-4 border border-white/20 rounded-full animate-pulse"></div>
