@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { motion } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 import benzedeiraImg from './benzedeira.png';
 import coachImg from './coach.png';
 import { 
@@ -267,11 +267,15 @@ export default function App() {
               viewport={{ once: true }}
               className="lg:w-1/2 relative flex justify-center w-full"
             >
-              <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white w-full max-w-md bg-gray-200">
+              <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white w-full max-w-md bg-spiritual-purple/5">
                 <img 
                   src={benzedeiraImg}
                   alt="Benzedeira - Quem sou eu" 
-                  className="w-full h-[500px] md:h-[600px] object-cover object-top block bg-spiritual-purple/10"
+                  className="w-full h-[500px] md:h-[600px] object-cover object-top block"
+                  onError={(e) => {
+                    // Fallback para imagem profissional caso a local falhe no Vercel
+                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&q=80&w=800";
+                  }}
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 w-64 h-64 bg-spiritual-gold/20 rounded-full blur-3xl -z-0"></div>
@@ -391,7 +395,11 @@ export default function App() {
                 <img 
                   src={coachImg}
                   alt="Coach Espiritual" 
-                  className="w-full h-full object-cover object-top block bg-spiritual-purple/10"
+                  className="w-full h-full object-cover object-top block"
+                  onError={(e) => {
+                    // Fallback para imagem profissional caso a local falhe no Vercel
+                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=800";
+                  }}
                 />
               </div>
               <div className="absolute -inset-4 border border-white/20 rounded-full animate-pulse"></div>
