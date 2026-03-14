@@ -263,13 +263,13 @@ export default function App() {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="lg:w-1/2 relative flex justify-center"
+              className="lg:w-1/2 relative flex justify-center w-full"
             >
-              <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white max-w-md lg:max-w-full mx-auto">
+              <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white w-full max-w-md bg-gray-200">
                 <img 
-                  src="/benzedeira.png" 
+                  src="benzedeira.png" 
                   alt="Benzedeira - Quem sou eu" 
-                  className="w-full h-[500px] md:h-[600px] object-cover object-top"
+                  className="w-full h-[500px] md:h-[600px] object-cover object-top block"
                   referrerPolicy="no-referrer"
                 />
               </div>
@@ -384,13 +384,13 @@ export default function App() {
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="w-48 h-48 md:w-64 md:h-64 relative mx-auto lg:mx-0"
+              className="w-48 h-48 md:w-64 md:h-64 relative mx-auto flex-shrink-0"
             >
-              <div className="w-full h-full rounded-full overflow-hidden border-4 border-spiritual-gold/30 shadow-2xl">
+              <div className="w-full h-full rounded-full overflow-hidden border-4 border-spiritual-gold/30 shadow-2xl bg-spiritual-purple/20">
                 <img 
-                  src="/coach.png" 
+                  src="coach.png" 
                   alt="Coach Espiritual" 
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-top block"
                   referrerPolicy="no-referrer"
                 />
               </div>
