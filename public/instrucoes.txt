@@ -1,0 +1,1 @@
+Este arquivo garante que a pasta public seja enviada para o GitHub. Você pode apagar este arquivo depois de subir suas fotos.
