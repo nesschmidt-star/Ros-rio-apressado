@@ -5,8 +5,8 @@
 
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import benzedeiraImg from './benzedeira.png';
-import coachImg from './coach.png';
+import bImg from './b.png';
+import cImg from './c.png';
 import { 
   MessageCircle, 
   Sparkles, 
@@ -269,21 +269,12 @@ export default function App() {
             >
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white w-full max-w-md bg-spiritual-purple/10 flex items-center justify-center min-h-[500px]">
                 <img 
-                  src={benzedeiraImg}
+                  src={bImg}
                   alt="Benzedeira - Quem sou eu" 
                   className="w-full h-[500px] md:h-[600px] object-cover object-top block"
                   loading="eager"
                   onError={(e) => {
-                    const img = e.target as HTMLImageElement;
-                    // Se falhou o import do src, tenta o caminho da public
-                    if (!img.src.includes('unsplash')) {
-                      if (img.src === benzedeiraImg) {
-                        img.src = "/benzedeira.png";
-                      } else {
-                        // Se tudo falhar, usa a reserva
-                        img.src = "https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&q=80&w=800";
-                      }
-                    }
+                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&q=80&w=800";
                   }}
                 />
               </div>
@@ -402,21 +393,12 @@ export default function App() {
             >
               <div className="w-full h-full rounded-full overflow-hidden border-4 border-spiritual-gold/30 shadow-2xl bg-spiritual-purple/10 flex items-center justify-center">
                 <img 
-                  src={coachImg}
+                  src={cImg}
                   alt="Coach Espiritual" 
                   className="w-full h-full object-cover object-top block"
                   loading="eager"
                   onError={(e) => {
-                    const img = e.target as HTMLImageElement;
-                    // Se falhou o import do src, tenta o caminho da public
-                    if (!img.src.includes('unsplash')) {
-                      if (img.src === coachImg) {
-                        img.src = "/coach.png";
-                      } else {
-                        // Se tudo falhar, usa a reserva
-                        img.src = "https://images.unsplash.com/photo-1499209974431-9dac3adaf471?auto=format&fit=crop&q=80&w=800";
-                      }
-                    }
+                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1499209974431-9dac3adaf471?auto=format&fit=crop&q=80&w=800";
                   }}
                 />
               </div>
