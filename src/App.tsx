@@ -272,6 +272,11 @@ export default function App() {
                   alt="Benzedeira - Quem sou eu" 
                   className="w-full h-[500px] md:h-[600px] object-cover object-center block"
                   loading="eager"
+                  onError={(e) => {
+                    const img = e.target as HTMLImageElement;
+                    // Fallback para garantir que algo apareça se o asset falhar
+                    img.src = "https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&q=80&w=800";
+                  }}
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 w-64 h-64 bg-spiritual-gold/20 rounded-full blur-3xl -z-0"></div>
