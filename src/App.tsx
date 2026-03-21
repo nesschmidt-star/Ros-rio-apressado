@@ -6,7 +6,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import bImg from './assets/benzedeira.png';
-import cImg from './assets/coach.png';
 import { 
   MessageCircle, 
   Sparkles, 
@@ -386,34 +385,12 @@ export default function App() {
         </div>
 
         <div className="container mx-auto px-6 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="w-48 h-48 md:w-64 md:h-64 relative mx-auto flex-shrink-0"
-            >
-              <div className="w-full h-full rounded-full overflow-hidden border-4 border-spiritual-gold/30 shadow-2xl bg-spiritual-purple/10 flex items-center justify-center">
-                <img 
-                  src={cImg}
-                  alt="Coach Espiritual" 
-                  className="w-full h-full object-cover object-top block"
-                  loading="eager"
-                  onError={(e) => {
-                    const img = e.target as HTMLImageElement;
-                    // Fallback para imagem profissional caso a local falhe
-                    img.src = "https://images.unsplash.com/photo-1499209974431-9dac3adaf471?auto=format&fit=crop&q=80&w=800";
-                  }}
-                />
-              </div>
-              <div className="absolute -inset-4 border border-white/20 rounded-full animate-pulse"></div>
-            </motion.div>
-
+          <div className="flex flex-col items-center justify-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-center lg:text-left max-w-2xl"
+              className="text-center max-w-2xl"
             >
               <h2 className="text-4xl md:text-6xl font-serif text-white mb-6">
                 Receba agora seu <br />
@@ -423,7 +400,7 @@ export default function App() {
                 Não permita que as energias negativas travem sua felicidade. 
                 A oração pode trazer paz, proteção e luz para sua vida hoje mesmo.
               </p>
-              <div className="flex justify-center lg:justify-start">
+              <div className="flex justify-center">
                 <WhatsAppButton text="Falar no WhatsApp agora" className="text-xl px-12 py-5" />
               </div>
               <p className="mt-8 text-white/50 text-sm">
