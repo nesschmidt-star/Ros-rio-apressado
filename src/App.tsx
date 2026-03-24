@@ -5,7 +5,6 @@
 
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import bImg from './assets/benzedeira.png';
 import { 
   MessageCircle, 
   Sparkles, 
@@ -268,7 +267,7 @@ export default function App() {
             >
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white w-full max-w-md bg-spiritual-purple/10 flex items-center justify-center min-h-[500px]">
                 <img 
-                  src={bImg}
+                  src="/benzedeira.png"
                   alt="Benzedeira - Quem sou eu" 
                   className="w-full h-[500px] md:h-[600px] object-cover object-center block"
                   loading="eager"
