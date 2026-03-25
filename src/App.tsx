@@ -15,7 +15,8 @@ import {
   CheckCircle2, 
   ArrowRight,
   Star,
-  Music
+  Music,
+  Instagram
 } from 'lucide-react';
 
 const WhatsAppButton = ({ className = "", text = "Falar no WhatsApp agora" }) => (
@@ -26,6 +27,18 @@ const WhatsAppButton = ({ className = "", text = "Falar no WhatsApp agora" }) =>
     className={`inline-flex items-center gap-2 bg-spiritual-gold hover:bg-opacity-90 text-white px-8 py-4 rounded-full font-medium transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 ${className}`}
   >
     <MessageCircle className="w-5 h-5" />
+    {text}
+  </a>
+);
+
+const InstagramButton = ({ className = "", text = "Siga-me no Instagram" }) => (
+  <a 
+    href="https://www.instagram.com/isadoradaluz_divina/" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className={`inline-flex items-center gap-2 bg-white border-2 border-spiritual-purple text-spiritual-purple hover:bg-spiritual-purple hover:text-white px-8 py-4 rounded-full font-medium transition-all shadow-sm hover:shadow-md transform hover:-translate-y-1 ${className}`}
+  >
+    <Instagram className="w-5 h-5" />
     {text}
   </a>
 );
@@ -267,14 +280,13 @@ export default function App() {
             >
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white w-full max-w-md bg-spiritual-purple/10 flex items-center justify-center min-h-[500px]">
                 <img 
-                  src="/benzedeira.png"
-                  alt="Benzedeira - Quem sou eu" 
+                  src="/benzedeira_final.png"
+                  alt="Isadora da Luz - Quem sou eu" 
                   className="w-full h-[500px] md:h-[600px] object-cover object-center block"
                   loading="eager"
                   onError={(e) => {
                     const img = e.target as HTMLImageElement;
-                    // Fallback para garantir que algo apareça se o asset falhar
-                    img.src = "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80&w=800";
+                    img.src = "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=800";
                   }}
                 />
               </div>
@@ -288,9 +300,10 @@ export default function App() {
               viewport={{ once: true }}
               className="lg:w-1/2"
             >
-              <span className="text-spiritual-gold font-medium tracking-widest uppercase text-sm mb-4 block text-center">Tradição e Fé</span>
-              <h2 className="text-4xl md:text-5xl font-serif text-spiritual-purple mb-6 text-center uppercase">Quem sou eu e como posso te ajudar</h2>
-              <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+              <span className="text-spiritual-gold font-medium tracking-widest uppercase text-sm mb-4 block">Tradição e Fé</span>
+              <h2 className="text-4xl md:text-5xl font-serif text-spiritual-purple mb-6 uppercase">Quem sou eu e como posso te ajudar</h2>
+              
+              <div className="space-y-6 text-lg text-gray-700 leading-relaxed mb-10">
                 <p>
                   Com anos de dedicação ao auxílio espiritual, carrego comigo a sabedoria das orações ancestrais e a força do Rosário Apressado.
                 </p>
@@ -301,11 +314,19 @@ export default function App() {
                   Cada rosário é rezado com entrega total, buscando trazer para sua vida o equilíbrio, a proteção contra o mal e a abertura dos caminhos que você tanto necessita.
                 </p>
               </div>
-              <div className="mt-10 flex items-center gap-4">
-                <div className="w-12 h-12 bg-spiritual-gold rounded-full flex items-center justify-center text-white">
-                  <CheckCircle2 className="w-6 h-6" />
+
+              <div className="flex flex-col sm:flex-row items-center gap-6 mb-12">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-spiritual-gold rounded-full flex items-center justify-center text-white shrink-0">
+                    <CheckCircle2 className="w-6 h-6" />
+                  </div>
+                  <span className="font-medium text-spiritual-purple text-left">Atendimento humanizado e discreto</span>
                 </div>
-                <span className="font-medium text-spiritual-purple">Atendimento humanizado e discreto</span>
+              </div>
+
+              <div className="flex flex-wrap gap-4">
+                <WhatsAppButton />
+                <InstagramButton />
               </div>
             </motion.div>
           </div>
