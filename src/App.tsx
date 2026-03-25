@@ -83,8 +83,8 @@ export default function App() {
         {/* Background Image with Overlay and Blur */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?auto=format&fit=crop&q=80&w=2000" 
-            alt="Rosário Apressado - Velas e Oração" 
+            src="https://images.unsplash.com/photo-1519834785169-98be25ec3f84?auto=format&fit=crop&q=80&w=2000" 
+            alt="Luz e Espiritualidade" 
             className="w-full h-full object-cover opacity-50 scale-105"
             referrerPolicy="no-referrer"
           />
@@ -274,7 +274,7 @@ export default function App() {
                   onError={(e) => {
                     const img = e.target as HTMLImageElement;
                     // Fallback para garantir que algo apareça se o asset falhar
-                    img.src = "https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&q=80&w=800";
+                    img.src = "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80&w=800";
                   }}
                 />
               </div>
