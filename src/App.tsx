@@ -5,7 +5,6 @@
 
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import coachImage from './assets/coach.png';
 import { 
   MessageCircle, 
   Sparkles, 
@@ -17,8 +16,10 @@ import {
   ArrowRight,
   Star,
   Music,
-  Instagram
+  Instagram,
+  Camera
 } from 'lucide-react';
+import { useState } from 'react';
 
 const WhatsAppButton = ({ className = "", text = "Falar no WhatsApp agora" }) => (
   <a 
@@ -76,6 +77,19 @@ const SectionTitle = ({ children, subtitle, light = false }: { children: React.R
 );
 
 export default function App() {
+  const [profileImage, setProfileImage] = useState<string>("/benzedeira.png");
+
+  const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setProfileImage(reader.result as string);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
   return (
     <div className="min-h-screen selection:bg-spiritual-gold/30">
       {/* Floating WhatsApp Button */}
@@ -291,17 +305,37 @@ export default function App() {
               viewport={{ once: true }}
               className="lg:w-1/2 relative flex justify-center w-full"
             >
-              <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white w-full max-w-md bg-spiritual-purple/10 flex items-center justify-center min-h-[500px]">
+              <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white w-full max-w-md bg-spiritual-purple/10 flex flex-col items-center justify-center min-h-[500px] group">
                 <img 
-                  src={coachImage}
+                  src={profileImage}
                   alt="Isadora da Luz - Quem sou eu" 
                   className="w-full h-[500px] md:h-[600px] object-cover object-center block"
                   loading="eager"
                   onError={(e) => {
                     const img = e.target as HTMLImageElement;
-                    img.src = "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=800";
+                    if (profileImage !== "/coach.png") {
+                      setProfileImage("/coach.png");
+                    } else {
+                      img.src = "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=800";
+                    }
                   }}
                 />
+                
+                {/* Upload Option */}
+                <label 
+                  htmlFor="photo-upload" 
+                  className="absolute bottom-4 right-4 bg-white/90 hover:bg-white text-spiritual-purple px-4 py-2 rounded-full cursor-pointer shadow-lg transition-all opacity-0 group-hover:opacity-100 flex items-center gap-2 border border-spiritual-gold/30"
+                >
+                  <Camera className="w-4 h-4" />
+                  <span className="text-sm font-medium">Trocar Foto</span>
+                  <input 
+                    type="file" 
+                    id="photo-upload" 
+                    className="hidden" 
+                    accept="image/*" 
+                    onChange={handleImageUpload} 
+                  />
+                </label>
               </div>
               <div className="absolute -bottom-6 -right-6 w-64 h-64 bg-spiritual-gold/20 rounded-full blur-3xl -z-0"></div>
               <div className="absolute -top-6 -left-6 w-48 h-48 bg-spiritual-purple/10 rounded-full blur-2xl -z-0"></div>
