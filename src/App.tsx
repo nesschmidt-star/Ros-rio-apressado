@@ -292,7 +292,7 @@ export default function App() {
             >
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white w-full max-w-md bg-spiritual-purple/10 flex flex-col items-center justify-center min-h-[500px]">
                 <img 
-                  src="/isadora_benzedeira.png"
+                  src="/benzedeira_final.png"
                   alt="Isadora da Luz - Quem sou eu" 
                   className="w-full h-[500px] md:h-[600px] object-cover object-center block"
                   loading="eager"
