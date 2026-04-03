@@ -183,11 +183,23 @@ export default function App() {
                 Proteção Espiritual
               </motion.span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-10 font-light">
+            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-8 font-light">
               Quando as energias estão pesadas, a oração pode abrir caminhos. 
               Sinta a paz e a leveza de uma alma protegida.
             </p>
-            <WhatsAppButton text="Receber oração agora pelo WhatsApp" className="text-lg" />
+            
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+              className="mb-10"
+            >
+              <p className="text-2xl md:text-3xl font-serif text-spiritual-gold italic leading-tight drop-shadow-[0_0_10px_rgba(212,175,55,0.3)]">
+                "Deixe suas intenções nas mãos de quem vai rezar por você com fé e compromisso"
+              </p>
+            </motion.div>
+
+            <WhatsAppButton text="Pedir meu rosário agora" className="text-lg" />
           </motion.div>
         </div>
 
@@ -263,7 +275,7 @@ export default function App() {
           </div>
           
           <div className="text-center mt-16">
-            <WhatsAppButton />
+            <WhatsAppButton text="Pedir meu rosário agora" />
           </div>
         </div>
       </section>
@@ -286,7 +298,7 @@ export default function App() {
                   loading="eager"
                   onError={(e) => {
                     const img = e.target as HTMLImageElement;
-                    img.src = "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80&w=800";
+                    img.src = "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=800";
                   }}
                 />
               </div>
@@ -421,7 +433,7 @@ export default function App() {
                 A oração pode trazer paz, proteção e luz para sua vida hoje mesmo.
               </p>
               <div className="flex justify-center">
-                <WhatsAppButton text="Falar no WhatsApp agora" className="text-xl px-12 py-5" />
+                <WhatsAppButton text="Pedir meu rosário agora" className="text-xl px-12 py-5" />
               </div>
               <p className="mt-8 text-white/50 text-sm">
                 Atendimento 100% online e sigiloso.
