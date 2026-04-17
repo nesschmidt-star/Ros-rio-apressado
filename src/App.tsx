@@ -292,14 +292,13 @@ export default function App() {
             >
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white w-full max-w-md bg-spiritual-purple/10 flex flex-col items-center justify-center min-h-[500px]">
                 <img 
-                  src="/benzedeira.png"
+                  src="/benzedeira.png?v=update"
                   alt="Isadora da Luz - Quem sou eu" 
                   className="w-full h-[500px] md:h-[600px] object-cover object-center block"
                   loading="eager"
                   onError={(e) => {
                     const img = e.target as HTMLImageElement;
-                    img.src = "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=800";
-                    img.style.display = 'block';
+                    img.style.opacity = '0';
                   }}
                 />
               </div>
